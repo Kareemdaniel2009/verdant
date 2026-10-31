@@ -341,51 +341,72 @@ body{
     background-color: #faf7ee;
     padding: 50px 20px;
 }
+
 .aisels-header{
     display: flex;
     justify-content: space-between;
 }
+
 .aisels-header .view-aisels-link{
     align-self: flex-end;
     color: #1f2e24;
     font-size: 13px;
 }
+
 .aisels-subheading, .how-it-works-subheading{
     color: #4a7c59;
     font-size: 12px;
 }
+
 .aisels-heading, .how-it-works-heading{
     font-family: "Source Serif 4", serif;
     font-size: 27px;
     font-weight: 400;
 }
+
 .aisels-card-wrapper{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
     margin-top: 30px;
 }
+
 .aisels-card{
     border: 1px solid #E3DECB;
     border-radius: 12px;
-    gap: 10px;
-    width: fit-content;
     background-color: white;
+    overflow: hidden;
 }
+
 .aisels-card > img{
-    width: 160px;
+    width: 100%;
     height: 160px;
+    object-fit: cover;
 }
+
 .aisels-card-content{
     padding: 10px;
 }
+
 .aisels-card-content > h4{
     font-weight: 600;
     color: #1F2E24;
     font-size: 13px;
 }
+
 .aisels-card-content > p{
     color: #6F6A5C;
     font-size: 11px;
+}
+
+@media screen and (max-width: 768px){
+    .aisels-card-wrapper{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .aisels-card > img{
+        height: 120px;
+    }
 }
 .how-it-works{
     background-color: #EAEDDA;
@@ -775,6 +796,8 @@ body{
     justify-content: space-between;
 }
 
+
+
 .footer-bottom > p{
     color: #a9b6a8;
     font-size: 10px;
@@ -825,3 +848,4 @@ body{
         gap: 10px;
     }
 } */
+ 
